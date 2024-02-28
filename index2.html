@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Execution Time Measurement</title>
+</head>
+<body>
+
+<script>
+function doSomething() {
+    
+    let sum = 0;
+    for (let i = 0; i < 1000000; i++) {
+        sum += i;
+    }
+    return sum;
+}
+
+console.time('doSomethingTime');
+
+doSomething();
+
+const executionTime = console.timeEnd('doSomethingTime');
+
+alert("Execution time for doSomething: " + executionTime + " milliseconds");
+
+</script>
+
+</body>
+</html>
